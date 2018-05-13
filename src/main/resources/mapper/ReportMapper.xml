@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flybear.hziee.app.mapper.ReportMapper">
+  <resultMap id="BaseResultMap" type="flybear.hziee.app.model.Report">
+    	<id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="report_content" property="reportContent" jdbcType="VARCHAR"/>
+        <result column="reporter" property="reporter" jdbcType="VARCHAR"/>
+        <result column="report_object" property="reportObject" jdbcType="VARCHAR"/>
+        <result column="report_time" property="reportTime" jdbcType="INTEGER"/>
+        <result column="report_state" property="reportState" jdbcType="INTEGER"/>
+        <result column="report_answer" property="reportAnswer" jdbcType="VARCHAR"/>
+        <result column="report_process" property="reportProcess" jdbcType="VARCHAR"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id,report_content,reporter,report_object,report_time,report_state,report_answer,report_process from x_report
+  </select>
+    
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id,report_content,reporter,report_object,report_time,report_state,report_answer,report_process from x_report
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from x_report
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterType="flybear.hziee.app.model.Report">
+    update x_report set report_content = #{reportContent,jdbcType=VARCHAR},reporter = #{reporter,jdbcType=VARCHAR},report_object = #{reportObject,jdbcType=VARCHAR},report_time = #{reportTime,jdbcType=INTEGER},report_state = #{reportState,jdbcType=INTEGER},report_answer = #{reportAnswer,jdbcType=VARCHAR},report_process = #{reportProcess,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insert" parameterType="flybear.hziee.app.model.Report">
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into x_report (id,report_content,reporter,report_object,report_time,report_state,report_answer,report_process)  
+    values ( #{id,jdbcType=INTEGER},#{reportContent,jdbcType=VARCHAR},#{reporter,jdbcType=VARCHAR},#{reportObject,jdbcType=VARCHAR},#{reportTime,jdbcType=INTEGER},#{reportState,jdbcType=INTEGER},#{reportAnswer,jdbcType=VARCHAR},#{reportProcess,jdbcType=VARCHAR})
+  </insert>  
+</mapper>

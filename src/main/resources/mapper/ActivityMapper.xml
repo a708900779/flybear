@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flybear.hziee.app.mapper.ActivityMapper">
+  <resultMap id="BaseResultMap" type="flybear.hziee.app.model.Activity">
+    	<id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="location" property="location" jdbcType="VARCHAR"/>
+        <result column="poster" property="poster" jdbcType="VARCHAR"/>
+        <result column="start_date" property="startDate" jdbcType="INTEGER"/>
+        <result column="end_date" property="endDate" jdbcType="INTEGER"/>
+        <result column="applicant" property="applicant" jdbcType="VARCHAR"/>
+        <result column="phone_number" property="phoneNumber" jdbcType="INTEGER"/>
+        <result column="application_time" property="applicationTime" jdbcType="INTEGER"/>
+        <result column="Max_num" property="maxNum" jdbcType="INTEGER"/>
+        <result column="department" property="department" jdbcType="VARCHAR"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id,name,content,location,poster,start_date,end_date,applicant,phone_number,application_time,Max_num,department from x_activity
+  </select>
+    
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id,name,content,location,poster,start_date,end_date,applicant,phone_number,application_time,Max_num,department from x_activity
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from x_activity
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterType="flybear.hziee.app.model.Activity">
+    update x_activity set name = #{name,jdbcType=VARCHAR},content = #{content,jdbcType=VARCHAR},location = #{location,jdbcType=VARCHAR},poster = #{poster,jdbcType=VARCHAR},start_date = #{startDate,jdbcType=INTEGER},end_date = #{endDate,jdbcType=INTEGER},applicant = #{applicant,jdbcType=VARCHAR},phone_number = #{phoneNumber,jdbcType=INTEGER},application_time = #{applicationTime,jdbcType=INTEGER},Max_num = #{maxNum,jdbcType=INTEGER},department = #{department,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insert" parameterType="flybear.hziee.app.model.Activity">
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into x_activity (id,name,content,location,poster,start_date,end_date,applicant,phone_number,application_time,Max_num,department)  
+    values ( #{id,jdbcType=INTEGER},#{name,jdbcType=VARCHAR},#{content,jdbcType=VARCHAR},#{location,jdbcType=VARCHAR},#{poster,jdbcType=VARCHAR},#{startDate,jdbcType=INTEGER},#{endDate,jdbcType=INTEGER},#{applicant,jdbcType=VARCHAR},#{phoneNumber,jdbcType=INTEGER},#{applicationTime,jdbcType=INTEGER},#{maxNum,jdbcType=INTEGER},#{department,jdbcType=VARCHAR})
+  </insert>  
+</mapper>

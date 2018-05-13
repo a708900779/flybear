@@ -1,0 +1,151 @@
+@CHARSET 'UTF-8';
+.allot-page {
+    background: white;
+}
+
+.allot-page>.panel>.panel-body {
+    border: none;
+}
+
+.allot-page .top {
+    position: relative;
+    margin-left: 20px;
+}
+
+
+.allot-center::after{
+    content: '';
+    clear: both;
+    display: block;
+
+}
+
+.allot-page .setting-btn {
+    position: absolute;
+    top: 0;
+    right: 160px;
+}
+
+.allot-page .center1,
+.allot-page .center2,
+.allot-page .center3,
+.allot-page .center4 {
+    display: inline-block;
+    float: left;
+}
+
+
+/**/
+
+.allot-page .center1 {
+    width: 100px;
+    margin: 0 20px 0 20px;
+}
+
+.allot-page .center1>ul {
+    overflow: auto;
+    height: 600px;
+    border: 1px solid;
+}
+
+.allot-page .center1>ul>li {
+    padding: 2px 0 2px 0;
+    text-align: center;
+}
+
+.allot-page .center1>ul>li:hover {
+    background: #45bdfe;
+}
+
+
+/**/
+
+.allot-page .center2 {
+    width: 60%;
+}
+
+.allot-page .center2>.baidu-map {
+    width: 100%;
+    height: 600px;
+    margin: 5px 0 0 0;
+    background: #eee;
+}
+
+
+/**/
+
+.allot-page .center3 {
+    width: 160px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.allot-page .center3>.table-title {
+    margin: 20px 0 0 0;
+}
+
+.allot-page .center3>ul {
+    overflow: auto;
+    height: 500px;
+    border: 1px solid;
+}
+
+.allot-page .center3>ul>li {
+    padding: 2px 0 2px 0;
+    text-align: center;
+}
+
+.allot-page .center3>ul>li:hover {
+    background: #45bdfe;
+}
+
+
+/**/
+
+.allot-page .center4 {
+    position: relative;
+    width: 180px;
+}
+
+.allot-page .center4 .left {
+    float: left;
+    width: 30%;
+}
+
+.allot-page .center4 .left button {
+    display: block;
+    margin-top: 100px;
+}
+
+.allot-page .center4 .right {
+    float: left;
+    width: 70%;
+}
+
+.allot-page .center4>.right>p {
+    margin-top: 20px;
+}
+
+.allot-page .center4>.right>ul {
+    overflow: auto;
+    height: 500px;
+    border: 1px solid;
+}
+
+.allot-page .center4>.right>ul>li {
+    padding: 2px 0 2px 0;
+    text-align: center;
+}
+
+.allot-page .center4>.right>ul>li:hover {
+    background: #45bdfe;
+}
+
+.bottom-btns {
+    text-align: right;
+}
+
+.bottom-btns button {
+    width: 80px;
+    margin-right: 20px;
+}

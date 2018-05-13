@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flybear.hziee.app.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="flybear.hziee.app.model.Student">
+    	<id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="grade" property="grade" jdbcType="VARCHAR"/>
+        <result column="class_number" property="classNumber" jdbcType="INTEGER"/>
+        <result column="student_id" property="studentId" jdbcType="INTEGER"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="student_name" property="studentName" jdbcType="VARCHAR"/>
+        <result column="major" property="major" jdbcType="VARCHAR"/>
+        <result column="counselor" property="counselor" jdbcType="VARCHAR"/>
+        <result column="activity_name" property="activityName" jdbcType="VARCHAR"/>
+        <result column="activity_num" property="activityNum" jdbcType="INTEGER"/>
+        <result column="la_activity_name" property="laActivityName" jdbcType="VARCHAR"/>
+        <result column="la_activity_num" property="laActivityNum" jdbcType="INTEGER"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id,grade,class_number,student_id,password,student_name,major,counselor,activity_name,activity_num,la_activity_name,la_activity_num from x_student
+  </select>
+    
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id,grade,class_number,student_id,password,student_name,major,counselor,activity_name,activity_num,la_activity_name,la_activity_num from x_student
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from x_student
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterType="flybear.hziee.app.model.Student">
+    update x_student set grade = #{grade,jdbcType=VARCHAR},class_number = #{classNumber,jdbcType=INTEGER},student_id = #{studentId,jdbcType=INTEGER},password = #{password,jdbcType=VARCHAR},student_name = #{studentName,jdbcType=VARCHAR},major = #{major,jdbcType=VARCHAR},counselor = #{counselor,jdbcType=VARCHAR},activity_name = #{activityName,jdbcType=VARCHAR},activity_num = #{activityNum,jdbcType=INTEGER},la_activity_name = #{laActivityName,jdbcType=VARCHAR},la_activity_num = #{laActivityNum,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insert" parameterType="flybear.hziee.app.model.Student">
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into x_student (id,grade,class_number,student_id,password,student_name,major,counselor,activity_name,activity_num,la_activity_name,la_activity_num)  
+    values ( #{id,jdbcType=INTEGER},#{grade,jdbcType=VARCHAR},#{classNumber,jdbcType=INTEGER},#{studentId,jdbcType=INTEGER},#{password,jdbcType=VARCHAR},#{studentName,jdbcType=VARCHAR},#{major,jdbcType=VARCHAR},#{counselor,jdbcType=VARCHAR},#{activityName,jdbcType=VARCHAR},#{activityNum,jdbcType=INTEGER},#{laActivityName,jdbcType=VARCHAR},#{laActivityNum,jdbcType=INTEGER})
+  </insert>  
+</mapper>

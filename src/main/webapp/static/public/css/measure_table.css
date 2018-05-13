@@ -1,0 +1,44 @@
+.base .table,
+.base .table th,
+.base .table td
+{
+    border: 1px solid black;
+}
+.base .table
+{
+    margin-top: 40px;
+    width: 100%;
+}
+.base .table th,
+.base .table td
+{
+    vertical-align: top;
+}
+
+.select-item-type{
+  float: left;
+  margin: 2px 10px;
+}
+.select-item-type select{
+  width: 160px;
+}
+.office-select{
+  margin: 0 10px 0 15px;
+  display: inline-block;
+  float: left;
+}
+.office-select select{
+  width: 160px;
+}
+
+.base .warn-remind{
+  background: #65BBE0;
+  width: 860px;
+  border-radius: 5px;
+  padding: 2px 4px 2px 0;
+  margin-top: 20px;
+}
+
+.base .warn-remind li{
+	margin: 2px 0;
+}

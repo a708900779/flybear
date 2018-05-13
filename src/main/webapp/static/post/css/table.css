@@ -1,0 +1,66 @@
+ul{
+    list-style: none;
+}
+.base .table thead
+{
+    background: #ddded8;
+}
+.base .table{
+	text-align: center;
+}
+.base .table,
+th,
+td
+{
+    border: 1px solid black;
+}
+
+.base .table .week-sign
+{
+    margin: 0 4px;
+    padding: 2px 4px;
+
+    color: white;
+    border-radius: 4px;
+    background: black;
+}
+.base .table .week-file
+{
+    overflow: hidden;
+
+    width: 80%;
+    height: 20px;
+    margin: 0;
+    padding: 2px 4px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: white;
+    border-radius: 4px;
+    background: #2348c9;
+    box-shadow: 1px 1px 2px #0b2859;
+    text-align: left;
+}
+
+.base .table .week-file img
+{
+    display: block;
+    float: left;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+
+    background: url('../images/copy.png');
+}
+
+.base .content
+{
+    margin: 40px 0 20px 0;
+
+    width: 100%;
+    list-style: none;
+
+    overflow: auto;
+}

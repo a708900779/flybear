@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flybear.hziee.app.mapper.QuestionMapper">
+  <resultMap id="BaseResultMap" type="flybear.hziee.app.model.Question">
+    	<id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="question_title" property="questionTitle" jdbcType="VARCHAR"/>
+        <result column="question_content" property="questionContent" jdbcType="VARCHAR"/>
+        <result column="sponsor_id" property="sponsorId" jdbcType="VARCHAR"/>
+        <result column="release_time" property="releaseTime" jdbcType="INTEGER"/>
+        <result column="answer" property="answer" jdbcType="VARCHAR"/>
+        <result column="answerer_id" property="answererId" jdbcType="INTEGER"/>
+        <result column="question_type" property="questionType" jdbcType="INTEGER"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id,question_title,question_content,sponsor_id,release_time,answer,answerer_id,question_type from x_question
+  </select>
+    
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id,question_title,question_content,sponsor_id,release_time,answer,answerer_id,question_type from x_question
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from x_question
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterType="flybear.hziee.app.model.Question">
+    update x_question set question_title = #{questionTitle,jdbcType=VARCHAR},question_content = #{questionContent,jdbcType=VARCHAR},sponsor_id = #{sponsorId,jdbcType=VARCHAR},release_time = #{releaseTime,jdbcType=INTEGER},answer = #{answer,jdbcType=VARCHAR},answerer_id = #{answererId,jdbcType=INTEGER},question_type = #{questionType,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insert" parameterType="flybear.hziee.app.model.Question">
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into x_question (id,question_title,question_content,sponsor_id,release_time,answer,answerer_id,question_type)  
+    values ( #{id,jdbcType=INTEGER},#{questionTitle,jdbcType=VARCHAR},#{questionContent,jdbcType=VARCHAR},#{sponsorId,jdbcType=VARCHAR},#{releaseTime,jdbcType=INTEGER},#{answer,jdbcType=VARCHAR},#{answererId,jdbcType=INTEGER},#{questionType,jdbcType=INTEGER})
+  </insert>  
+</mapper>

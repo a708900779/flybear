@@ -1,0 +1,96 @@
+ul{
+	list-style: none;
+}
+.header{
+  width: 100%;
+  margin: 10px 0 -10px 0;
+  background: transparent;
+}
+.content{
+  background: transparent;
+}
+
+.header .title{
+  margin: 0 0 10px 50px;
+  display: inline-block;
+}
+.header .backIndex{
+  margin: 0px 20px 0 10px;
+  float: left;
+}
+.header .searchBtns{
+  float: left;
+  margin: 0;
+}
+.header .searchBtns button{
+  margin: 2px 0 0 0;
+}
+.header .searchBtns input{
+  width: 80px;
+}
+.header .statistics_admin_title{
+  float: left;
+}
+.header .select-statistic-month{
+  float: left;
+}
+.header .select-statistic-month select{
+  width: 100px;
+  margin-left: 5px;
+}
+.header .select-statistic-month span{
+  margin-right: 5px;
+}
+
+.header .form-group{
+  float: left;
+  margin: 0;
+  line-height: 30px;
+}
+
+.header .form-group input{
+  width: 120px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.header .jump{
+  float: right;
+  margin: 0 20px 0 0;
+}
+.header .jump a{
+  margin: 0 0 0 10px;
+}
+.header .system-remind{
+  color: white;
+  text-align: center;
+  background: #747CB8;
+  line-height: 30px;
+  border-radius: 5px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.header .warn-remind{
+  background: #65BBE0;
+  width: 60%;
+  border-radius: 5px;
+  padding: 2px 4px 2px 0;
+}
+
+.footer{
+  width: 1000px;
+  height: 100px;
+  background: #eee;
+  margin-top: 20px;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .base,
+    .footer,
+    .header{
+        width: 1100px;
+    }
+}
+

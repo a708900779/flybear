@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codege  xmlns="http://bysj.hziee.edu.cn/schema"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://bysj.hziee.edu.cn/schema http://bysj.hziee.edu.cn/schema/codege.xsd">
+  
+	<config>
+		<param name="project_name" value="springboot"/>
+		<param name="append" value="true"/><!-- 是否覆盖，false表示覆盖，true表示追加 -->
+		<param name="driver" value="com.mysql.jdbc.Driver"/>
+		<param name="url" value="jdbc:mysql://localhost/demo"/>
+		<param name="username" value="root"/>
+		<param name="password" value="root"/>
+		<param name="jdbc_prex" value="x_"/>
+	</config>
+	<!-- 
+	%表示针对jdbc_prex表前缀下的所有表一起生成，也可以写具体表名“表前缀_表名”，可以写多个table节点 
+	field表示JSP视图中需要特殊化处理的字段，没有列出的字段一律按普通文本框input显示，特殊类型控件type属性值有checkbox, file，date，select
+	-->
+	 <tables>
+		<table name="x_chat">
+			
+		</table>
+   </tables>
+   
+   <!-- <tables>
+		<table name="x_abc">
+			<field type="checkbox" name="id"></field>
+		</table>
+		<table name="x_efg">
+			<field type="checkbox" name="id"></field>
+		</table>
+	</tables> -->
+	
+<!-- 	<tables>
+		<table name="x_news">
+	
+		</table>
+		<table name="%">
+			<field type="checkbox" name=""/>
+		</table>
+	</tables> -->
+</codege>

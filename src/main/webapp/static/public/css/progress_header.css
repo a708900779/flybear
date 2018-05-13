@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+.header .header-table{
+	width: 90%;
+	margin: 10px auto 0;
+}
+.header .header-table td{
+	text-align: center;
+	font-size: 14px;
+}
+.invest{
+	display: inline-block;
+	margin: 0 10px 0 10px;
+
+}
+.search_visiter{
+	display: inline-block;
+}
+.search_visiter>input{
+	width: 100px;
+}
+
+.btns{
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+}
+.checkboxs{
+	display: inline-block;
+	margin: 0 0 0 5px;
+}
+.checkboxs input{
+	margin-left: 5px;
+}
+
+.content-table{
+	width: 90%;
+	margin: 10px auto 10px;
+}
+.content-table td{
+	font-size: 14px;
+}
+
+.statistic{
+	height: 34px;
+}
+.statistic span{
+	display: inline-block;
+	line-height: 34px;
+	width: 30%;
+	font-size: 14px;
+	text-align: center;
+}
+
+.footer .footer-table{
+	width: 90%;
+	margin: 5px auto;
+	font-size: 14px;
+}
+.footer .footer-table tr{
+	height: 25px
+}
+.footer .footer-table td{
+	text-align: center;
+	width: 25%;
+}
+.footer .footer-btns{
+	text-align: center;
+}
+
+.footer .footer-btns button{
+	margin: 5px 10px 0;
+}
+

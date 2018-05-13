@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flybear.hziee.app.mapper.PlateMapper">
+  <resultMap id="BaseResultMap" type="flybear.hziee.app.model.Plate">
+    	<id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="plate_name" property="plateName" jdbcType="VARCHAR"/>
+        <result column="plate_manager" property="plateManager" jdbcType="INTEGER"/>
+        <result column="project_num" property="projectNum" jdbcType="INTEGER"/>
+        <result column="last_edit_time" property="lastEditTime" jdbcType="INTEGER"/>
+  </resultMap>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id,plate_name,plate_manager,project_num,last_edit_time from x_plate
+  </select>
+    
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id,plate_name,plate_manager,project_num,last_edit_time from x_plate
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from x_plate
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <update id="updateByPrimaryKey" parameterType="flybear.hziee.app.model.Plate">
+    update x_plate set plate_name = #{plateName,jdbcType=VARCHAR},plate_manager = #{plateManager,jdbcType=VARCHAR},project_num = #{projectNum,jdbcType=INTEGER},last_edit_time = #{lastEditTime,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insert" parameterType="flybear.hziee.app.model.Plate">
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into x_plate (id,plate_name,plate_manager,project_num,last_edit_time)  
+    values ( #{id,jdbcType=INTEGER},#{plateName,jdbcType=VARCHAR},#{plateManager,jdbcType=VARCHAR},#{projectNum,jdbcType=INTEGER},#{lastEditTime,jdbcType=INTEGER})
+  </insert>  
+</mapper>

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Nat Liu (natcube@gmail.com)
+ * @date    2016-10-14 19:04:09
+ * @version 2016-10-14 19:04:09
+ */
+/**Base and fix for jianqiao**/
+::-webkit-scrollbar{width:7px;height:7px}
+::-webkit-scrollbar-button:vertical{display:none}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track{background-color:#e2e2e2}
+::-webkit-scrollbar-thumb{border-radius:0;background-color:rgba(0,0,0,.3)}
+::-webkit-scrollbar-thumb:vertical:hover{background-color:rgba(0,0,0,.35)}
+::-webkit-scrollbar-thumb:vertical:active{background-color:rgba(0,0,0,.38)}
+
+.btn-primary,
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.layui-layer .layui-layer-btn .layui-layer-btn0,
+.pagination>.active>a,
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+	background-color: #265d5a;
+    border-color: #1b524f;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: #34716e;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active{
+	border-top-color:#265d5a;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary.active.focus,
+.btn-primary:active:hover,
+.btn-primary.hover {
+  background-color: #3f7976;
+}
+
+.uploadify:hover .btn-primary{
+    color: #fff;
+    background-color: #265d5a;
+    border-color: #1b524f;
+    background-image: none;
+}

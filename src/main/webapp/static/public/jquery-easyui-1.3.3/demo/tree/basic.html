@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/email.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>Basic Tree</h2>
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>Click the arrow on the left to expand or collapse nodes.</div>
+	</div>
+	<div style="margin:10px 0;"></div>
+	<ul class="easyui-tree">
+		<li>
+			<span>My Documents</span>
+			<ul>
+				<li data-options="state:'closed'">
+					<span>Photos</span>
+					<ul>
+						<li>
+							<span>Friend</span>
+						</li>
+						<li>
+							<span>Wife</span>
+						</li>
+						<li>
+							<span>Company</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span>Program Files</span>
+					<ul>
+						<li>Intel</li>
+						<li>Java</li>
+						<li>Microsoft Office</li>
+						<li>Games</li>
+					</ul>
+				</li>
+				<li>index.html</li>
+				<li>about.html</li>
+				<li>welcome.html</li>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="base_email">
+        <a href='index' class="btn btn-primary backIndex">返回首页</a>
+
+        <form action="" class="userinfo-form">
+          <ul>
+            <li>
+            	<span>执行类别：</span>
+				<select disabled="disabled">
+					<option value="厂家">厂家</option>
+				</select>
+            </li>
+            <li>
+            	<span>类型：</span>
+				<select disabled="disabled">
+					<option value="普通用户">普通用户</option>
+				</select>
+            </li>
+            <li>
+            	<span>用户名：</span><input name="username" type="text"></li>
+            <li>
+            	<span>密码：</span><input name="password" type="text"></li>
+            <li>
+            	<span>姓名：</span><input name="name" type="text"></li>
+            <li>
+            	<span>Email：</span><input name="email" type="email"></li>
+            <li>
+            	<span>职务：</span>
+				<select name="boss" disabled="disabled">
+					<option value="项目经理">项目经理</option>
+				</select>
+            </li>
+            <li>
+            	<span>所属区域：</span>
+				<select name="region" disabled="disabled">
+					<option value="普通用户">六大区</option>
+				</select>
+            </li>
+            <li>
+            	<span>TeamLeader：</span>
+				<select name="teamleader" disabled="disabled">
+					<option value="六大区TL02">六大区TL02</option>
+				</select>
+            </li>
+            <li>
+            	<span>TL Email：</span><input name="tlemail" readonly="readonly" type="email">
+            </li>
+            <li>
+            	<span>权限设置：</span>
+            	<div>
+            		<ul class="easyui-tree">
+						<li class="text-align:auto">
+							<span>My Documents</span>
+							<ul>
+								<li data-options="state:'closed'">
+									<span>Photos</span>
+									<ul>
+										<li>
+											<span>Friend</span>
+										</li>
+										<li>
+											<span>Wife</span>
+										</li>
+										<li>
+											<span>Company</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>Program Files</span>
+									<ul>
+										<li>Intel</li>
+										<li>Java</li>
+										<li>Microsoft Office</li>
+										<li>Games</li>
+									</ul>
+								</li>
+								<li>index.html</li>
+								<li>about.html</li>
+								<li>welcome.html</li>
+							</ul>
+						</li>
+					</ul>
+            	</div>
+				
+            </li>
+          </ul>
+
+          <div class="userinfo-btns">
+			<button class="btn" type="submit">保存</button>
+			<button class="btn" type="reset">重置</button>
+		  </div>
+        </form>
+      </div>
+
+</body>
+</html>

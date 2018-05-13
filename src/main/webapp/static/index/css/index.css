@@ -1,0 +1,215 @@
+body li
+{
+    list-style: none;
+}
+body table
+{
+    width: 100%;
+}
+/*¹¤¾ßÀà*/
+.no-border
+{
+    border: 2px solid white;
+    border-left: none;
+}
+.no-href
+{
+    color: black;
+}
+.no-href:hover
+{
+    color: black;
+}
+.header
+{
+    width: 90%;
+    margin: 0 auto;
+}
+.header .office ul
+{
+    display: inline-block;
+
+    padding: 0;
+}
+.header .office li
+{
+    display: inline-block;
+}
+.header .office li + li
+{
+    margin: 10px;
+}
+.header .office .radio
+{
+    float: left;
+}
+.header .information .index-btn button + button
+{
+    margin: 0 0 0 10px;
+}
+.header .information .index-btn
+{
+    width: 100px;
+    padding: 0;
+
+    text-align: right;
+}
+.header .information .index-btn button
+{
+    width: 80px;
+}
+.header .information select{
+    width: 160px;
+}
+.header .information .first-radio
+{
+    width: 300px;
+}
+.header .information .office-area{
+    width: 300px;
+}
+.header .information td
+{
+    text-align: left;
+}
+.header .information .second-teble td input
+{
+    width: 160px;
+}
+.header .information .second-teble .last-button
+{
+    width: 180px;
+    padding: 0 40px 0 0;
+
+    text-align: right;
+}
+.header .information .second-teble .last-button button
+{
+    width: 70px;
+}
+
+#threeRadio li
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+.header .thirdpart
+{
+    color: #1f82dc;
+}
+.base
+{
+    width: 90%;
+    margin: 10px auto;
+}
+.table_information .jump-btn
+{
+    border: none;
+    background: transparent;
+}
+
+.information td > span
+{
+    line-height: 28px;
+
+    display: inline-block;
+
+    margin: 0 5px 0 0;
+}
+.office_name
+{
+    float: left;
+}
+.base .button-warn
+{
+    margin: 0 10px 0 0;
+}
+
+.header .information table
+{
+    margin: 10px 0 10px;
+}
+
+.header .information tr
+{
+    height: 30px;
+}
+
+.table_information tr
+{
+    height: 30px;
+}
+.table_information th
+{
+    font-size: 12px;
+
+    color: #333;
+    background-color: #f2f2f2;
+}
+.table_information table
+{
+    border: 1px solid #ccc;
+}
+.table_information td,
+.table_information th
+{
+    /* border-left: .4px dashed #ccc;
+	border-right: .4px dashed #ccc; */
+    border-collapse: collapse;
+
+    text-align: center;
+}
+.table_information td
+{
+    border-top: 1px solid #ccc;
+}
+.table_information td + td,
+.table_information th + th
+{
+    margin-left: -2px;
+
+    border-left: .8px dashed #ccc;
+}
+.table_information .remind
+{
+    width: 100px;
+    margin: 0 0 0 10px;
+}
+.base .form-group
+{
+    margin: 10px 0 0 0;
+}
+.base .form-group .form-control
+{
+    width: 140px;
+}
+.base .form-group label
+{
+    font-weight: normal;
+
+    width: 70px;
+    padding: 0;
+}
+
+/*µ×²¿ */
+.footer
+{
+    width: 100%;
+    width: 80%;
+    height: 100px;
+    margin: 20px 0 0 0;
+    margin: 0 auto;
+
+    background: #eee;
+}
+
+
+@media screen and (max-width: 1300px)
+{
+    .header,
+    .footer,
+    .base
+    {
+        width: 950px;
+    }
+}
