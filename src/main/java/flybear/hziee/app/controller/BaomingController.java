@@ -49,6 +49,7 @@ public class BaomingController extends BaseController{
 	public String add(Model model,HttpServletRequest request,HttpServletResponse response,Baoming Baoming) throws Exception {
 		if (request.getMethod().equals("POST")) {
 			int flag = baomingService.save(Baoming);
+			System.out.println();
 			if (flag == 1) {
 				return ajaxReturn(response, null, "添加成功", 1);
 			} else {
@@ -57,6 +58,7 @@ public class BaomingController extends BaseController{
 		} else {
 			return "baoming/add";
 		}
+		//测试一下
 	}	
 
 	@RequestMapping(value={"edit"})
