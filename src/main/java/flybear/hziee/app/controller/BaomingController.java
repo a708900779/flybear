@@ -58,7 +58,6 @@ public class BaomingController extends BaseController{
 		} else {
 			return "baoming/add";
 		}
-		//测试一下
 	}	
 
 	@RequestMapping(value={"edit"})
